@@ -41,14 +41,21 @@ def list_all_files():
     filelist = [ f for f in sftp.listdir(REMOTE_DIR) if fnmatch.fnmatch(f, '*.csv') ]
     return filelist, sftp
 
-def habdle_files(files, connection):
+def handle_files(files, connection):
     for filename in files:
-        # Open file
-        with connection.open(os.path.join(REMOTE_DIR, filename).replace("\\","/")) as f:
-            # CSV file open as f, do something with it
-            # E.g. read into pandas dataframe
-            df = pd.read_csv(f, sep=';', engine='python')
-
+        # testing
+        if filename == 'yr-ydelsesrefusion-advisering-730-0025-2022-02-05.csv':
+        ###
+            # Open file
+            with connection.open(os.path.join(REMOTE_DIR, filename).replace("\\","/")) as f:
+                # CSV file open as f, do something with it
+                # E.g. read into pandas dataframe
+                df = pd.read_csv(f, sep=';', engine='python')
+                
+                # testing 
+                pd.set_option('display.max_columns', None)
+                print(df)
+                ###
 
 file_list, conn = list_all_files()
-habdle_files(file_list, conn)
+handle_files(file_list, conn)
