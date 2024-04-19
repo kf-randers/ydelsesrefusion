@@ -20,7 +20,7 @@ Nedenstående relaterer sig til et nyt Python app projekt der er baseret på den
 ## Udvikling lokalt:
 1. Gå til det nyoprettede repository i github.
 2. Klik på den grønne <>Code knap og kopier url'et, clone det med git: ```git clone <url>```
-3. Kør ```. ./setup-dev-linux.sh ``` (Linix) eller ```setup-dev-windows.bat``` (Windows), scriptet sætter et virtual environment op og installerer pakkerne i app/requirements.txt og requirements-dev.txt
+3. Kør ```. ./setup-dev-linux.sh ``` (Linux) eller ```setup-dev-windows.bat``` (Windows), scriptet sætter et virtual environment op og installerer pakkerne i app/requirements.txt og requirements-dev.txt
 
 ## Almindelige commands
 * Start app'en:  ```python app/app.py```
