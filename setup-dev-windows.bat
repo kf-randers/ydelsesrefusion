@@ -99,11 +99,11 @@ endlocal
     call "%env_name%\Scripts\activate"
 
     if exist "app\requirements.txt" (
-        python -m pip install -r app\requirements-dev.txt
+        python -m pip install -Ir app\requirements-dev.txt
     )
 
     if exist "requirements-dev.txt" (
-        python -m pip install -r requirements-dev.txt
+        python -m pip install -Ir requirements-dev.txt
     )
 
 :end

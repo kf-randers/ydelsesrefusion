@@ -28,5 +28,6 @@ Nedenstående relaterer sig til et nyt Python app projekt der er baseret på den
 * Kør i docker: ```docker-compose up```
 
 # TODO
+* cron / scheduler ?
 * database ?
 * frontend ?
