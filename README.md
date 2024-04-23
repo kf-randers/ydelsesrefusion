@@ -30,6 +30,7 @@ Nedenstående relaterer sig til et nyt Python app projekt der er baseret på den
 * Lint: ```flake8 app tests --show-source```
 
 # TODO
+* logging ?
 * cron / scheduler ?
 * database ?
 * frontend ?
