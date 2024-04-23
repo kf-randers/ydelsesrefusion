@@ -1,6 +1,6 @@
 import pytest
-import json
 from app.app import create_app
+
 
 @pytest.fixture()
 def app():
@@ -11,6 +11,7 @@ def app():
 
     yield app
 
+
 @pytest.fixture()
 def client(app):
     return app.test_client()
@@ -19,6 +20,7 @@ def client(app):
 @pytest.fixture()
 def runner(app):
     return app.test_cli_runner()
+
 
 def test_healthz(client):
     response = client.get('/healthz')
