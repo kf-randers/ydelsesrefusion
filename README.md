@@ -24,8 +24,10 @@ Nedenstående relaterer sig til et nyt Python app projekt der er baseret på den
 
 ## Almindelige commands
 * Start app'en:  ```python app/app.py```
-* Kør unit tests: ```pytest```
-* Kør i docker: ```docker-compose up```
+* Start app'en i docker container: ```docker-compose up```
+* Unit tests: ```pytest```
+* Unit tests med coverage ```pytest --cov=app```
+* Lint: ```flake8 app tests --show-source```
 
 # TODO
 * cron / scheduler ?
