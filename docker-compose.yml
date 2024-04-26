@@ -1,6 +1,6 @@
 version: "3.9"
 services:
-  napp:
+  app:
     build: app
     networks:
       - app_network
