@@ -6,10 +6,7 @@ from utils.config import DEBUG
 
 def get_logger(name):
     logger = logging.getLogger(name)
-    if DEBUG:
-        logger.setLevel(logging.DEBUG)
-    else:
-        logger.setLevel(logging.INFO)
+    logger.setLevel(logging.DEBUG) if DEBUG else logger.setLevel(logging.INFO)
     logger.addHandler(get_handler())
     return logger
 
