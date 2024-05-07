@@ -1,8 +1,8 @@
-import os
 from flask import Flask
 from healthcheck import HealthCheck
 
-DEBUG = os.getenv('DEBUG', False)
+from utils.config import DEBUG
+from utils.logging import get_logger
 
 
 def create_app():
@@ -12,5 +12,9 @@ def create_app():
     return app
 
 
+logger = get_logger(__name__)
+app = create_app()
+
+
 if __name__ == "__main__":  # pragma: no cover
-    create_app().run(debug=DEBUG, host='0.0.0.0', port=8080)
+    app.run(debug=DEBUG, host='0.0.0.0', port=8080)
