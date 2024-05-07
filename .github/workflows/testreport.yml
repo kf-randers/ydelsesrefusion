@@ -1,4 +1,4 @@
-name: Unit tests
+name: Test report
 
 # Controls when the workflow will run
 on:
