@@ -1,6 +1,4 @@
 import pytest
-import os
-from unittest import mock
 from app import create_app
 
 
