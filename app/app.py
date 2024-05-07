@@ -1,14 +1,17 @@
 from flask import Flask
 from healthcheck import HealthCheck
+from prometheus_client import generate_latest
 
-from utils.config import DEBUG
-from utils.logging import get_logger
+from utils.logging import get_logger, APP_RUNNING
+from utils.config import DEBUG, POD_NAME
 
 
 def create_app():
     app = Flask(__name__)
     health = HealthCheck()
     app.add_url_rule("/healthz", "healthcheck", view_func=lambda: health.run())
+    app.add_url_rule('/metrics', "metrics", view_func=generate_latest)
+    APP_RUNNING.labels(POD_NAME).set(1)
     return app
 
 
